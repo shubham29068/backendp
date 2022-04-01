@@ -1,7 +1,8 @@
 const MobileMessages = {
     // AUTH messages
     AUTH_SIGNUP: "Please check your email to confirm your account.",
-    AUTH_LOGIN: "You Have Successfully Logged In",
+    AUTH_USER_SIGNUP: "You have successfully signup",
+    AUTH_LOGIN: "You Have Successfully logged In",
     AUTH_VERIFY: "Verify Successfully",
     AUTH_PASSWORD_SET: "Thanks, we've updated your password. Please login below to continue to your account.",
     AUTH_FORGET_PASSWORD: "Forget Password mail send successfully",

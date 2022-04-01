@@ -17,7 +17,7 @@ class MailService {
                     }
                 });
                 let info = await transporter.sendMail({
-                    from: constant.EmailId,
+                    from: 'everardo.klein37@ethereal.email',
                     to: 'gideon.ryan42@ethereal.email',
                     subject: data.subject,
                     // text: "Hello world?",

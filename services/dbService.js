@@ -33,7 +33,7 @@ class DBService {
             }
         })
     }
-    insertMant(TableName, body) {
+    insertMany(TableName, body) {
         return new Promise(async (resolve, reject) => {
             try {
                 resolve(await TableName.insertMany(body));

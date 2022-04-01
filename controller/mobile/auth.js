@@ -47,13 +47,13 @@ module.exports = AuthController = function () {
             <p> Hi ${signup.firstName},</p>
             <p> Thank you for registering, please validate your email address by clicking on the link <a href="${constant.WEB_BASE_URL}verify-email/${signup.token}">here</a></p>.<br>  
             <p>Thanks,<br>
-            LMS Team</p>`
+            Team</p>`
             let subject = `SignUp`
 
             await mailService.send({ email: signup.email, token: signup.token, html: HTML, subject: subject });
 
 
-            return res.status(200).json({ success: true, message: mobileMessages.AUTH_LOGIN, data: signup });
+            return res.status(200).json({ success: true, message: mobileMessages.AUTH_USER_SIGNUP, data: signup });
 
 
         } catch (err) {
@@ -126,7 +126,7 @@ module.exports = AuthController = function () {
             <p> You are receiving this because you (or someone else) have requested the reset of the password for your account.</p>
             <p>Your OTP is ${validate.value.otp}</p>
             <p>Thanks,<br>
-            LMS Team</p>
+            Team</p>
             `;
             let subject = `ForgetPassword`
             await mailService.send({ email: isExist[0].email, html: HTML, subject: subject });
