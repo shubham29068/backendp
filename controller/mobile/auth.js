@@ -159,7 +159,7 @@ module.exports = AuthController = function () {
             if (!isExist[0].isOtpVerified) { throw mobileMessages.AUTH_OTP_NOT_VERIFY }
             validate.value.password = await bcryptjs.hash(validate.value.password, 10);
             const update = await dbService.update(UserModel, { _id: isExist[0]._id }, { password: validate.value.password, isOtpVerified: false, isPasswordSet: true });
-            return res.status(200).json({ success: true, message: mobileMessages.AUTH_VERIFY_OTP, data: isExist[0], token: await tokenService.create({ _id: isExist[0]._id }, { /* expiresIn: "1h"  */ }) });
+            return res.status(200).json({ success: true, message: mobileMessages.AUTH_CHANGE_PASSWORD, data: isExist[0], token: await tokenService.create({ _id: isExist[0]._id }, { /* expiresIn: "1h"  */ }) });
         } catch (err) {
             console.log('err', err)
             return res.status(200).json({ success: false, message: err });

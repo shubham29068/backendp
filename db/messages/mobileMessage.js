@@ -11,6 +11,7 @@ const MobileMessages = {
     AUTH_INVALID_OTP: "The OTP you entered is invalid. Please enter the correct OTP",
     AUTH_OTP_NOT_VERIFY: "Verification failed please try again",
     AUTH_VERIFY_OTP: "OTP Verified Successfully",
+    AUTH_CHANGE_PASSWORD: "change password successfully",
     // USER Messages
     USER_ALREADY_EXIST: " A user with this email address already exists",
     USER_ALREADY_EXIST_AS_TEACHER: "This email already registered as a teacher",
